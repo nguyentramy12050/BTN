@@ -2,144 +2,490 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiệm Sách Thư Hiên | Di Sản Tri Thức</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Thư Hiên" style="height: 55px;">
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li>
-                <a href="category.html">Danh mục <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Sách Kỹ Năng</a></li>
-                    <li><a href="#">Sách Văn Học Kinh Điển</a></li>
-                    <li><a href="#">Triết Học - Tâm Lý</a></li>
-                    <li><a href="#">Ấn Bản Giới Hạn</a></li>
-                    <li><a href="#">Sách Ngoại Văn Cũ</a></li>
-                    <li><a href="#">Sách Nghệ Thuật</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Bán lại sách cũ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
-
+        <div class="logo"><img src="logo.png" alt="Thư Hiên"></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li>
+                    <a href="category.html">Danh Mục <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="category.html">Sách Kỹ Năng</a></li>
+                        <li><a href="#">Triết Học & Đời Sống</a></li>
+                        <li><a href="#">Sách Ngoại Văn Tuyển Chọn</a></li>
+                        <li><a href="#">Ấn Bản Giới Hạn</a></li>
+                        <li><a href="#">Sách Thiếu Nhi Xưa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Bán Lại Sách Cũ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
         <div class="header-icons">
-            <i class="fa-solid fa-magnifying-glass" title="Tìm kiếm"></i>
-            <i class="fa-regular fa-user" title="Tài khoản"></i>
-            <div class="cart-icon" title="Giỏ hàng">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="cart-count">3</span>
-            </div>
+            <i class="fa-solid fa-search"></i>
+            <i class="fa-regular fa-user"></i>
+            <div class="cart-icon"><i class="fa-solid fa-shopping-bag"></i><span class="cart-badge">3</span></div>
         </div>
     </header>
 
-    <section class="hero-split">
+    <!-- Top Banner -->
+    <section class="top-banner reveal">
+        <div class="banner-content">
+            <span class="banner-tag">ƯU ĐÃI ĐẶC BIỆT</span>
+            <h2>Giảm 20% cho đơn hàng đầu tiên</h2>
+            <p>Mã giảm giá: THUHIE20 - Áp dụng đến 31/12/2026</p>
+            <a href="#store" class="btn-icon">MUA NGAY</a>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero reveal">
         <div class="hero-content">
-            <p style="color: var(--accent); letter-spacing: 3px;">EST 2024</p>
-            <h1>Hành trình tìm lại những trang đời bị lãng quên</h1>
-            <p>Tại Thư Hiên, chúng tôi tin rằng mỗi cuốn sách cũ là một tâm hồn đang chờ được đánh thức.</p>
-            <br>
-            <a href="#sanpham" style="display: inline-block; border: 1px solid var(--accent); color: var(--accent); padding: 12px 35px; text-decoration: none; font-weight: 600;">KHÁM PHÁ NGAY</a>
+            <span style="letter-spacing: 5px; color: var(--accent); font-weight: 600;">EST. 2026</span>
+            <h1>Gói ghém thời gian<br>vào từng trang sách</h1>
+            <p>Hơn cả một cửa hàng, Thư Hiên là nơi trú ngụ của những tâm hồn yêu vẻ đẹp cổ điển và tri thức tinh hoa.</p>
+            <a href="#store" class="btn-icon">KHÁM PHÁ NGAY</a>
         </div>
         <div class="hero-image"></div>
     </section>
 
-    <section class="features">
-        <div class="feature-item">
-            <i class="fa-solid fa-feather-pointed" style="color: var(--accent); font-size: 24px;"></i>
-            <h4>TUYỂN CHỌN KHẮT KHE</h4>
-            <p style="font-size: 12px;">Mỗi cuốn sách đều được kiểm tra tình trạng kỹ lưỡng.</p>
+    <!-- Sản Phẩm Mới Nhất -->
+    <section id="new-products" style="background: #f4f4f2;">
+        <div class="section-header reveal">
+            <h2><i class="fa-solid fa-clock"></i> Sản Phẩm Mới Nhất</h2>
+            <div class="divider"></div>
+            <p style="color: #666;">Những cuốn sách vừa cập nhật tuần này</p>
         </div>
-        <div class="feature-item">
-            <i class="fa-solid fa-box-open" style="color: var(--accent); font-size: 24px;"></i>
-            <h4>ĐÓNG GÓI NGHỆ THUẬT</h4>
-            <p style="font-size: 12px;">Sử dụng vật liệu thân thiện với môi trường.</p>
-        </div>
-        <div class="feature-item">
-            <i class="fa-solid fa-hourglass-half" style="color: var(--accent); font-size: 24px;"></i>
-            <h4>GIÁ TRỊ VƯỢT THỜI GIAN</h4>
-            <p style="font-size: 12px;">Nơi lưu giữ những ấn bản không còn tìm thấy trên thị trường.</p>
+        <div class="product-grid">
+            <div class="product-card reveal" style="animation-delay: 0.1s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600" alt="1984">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>1984 - George Orwell</h3><p class="price">175.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.2s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600" alt="Đắc Nhân Tâm">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Đắc Nhân Tâm</h3><p class="price">145.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.3s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600" alt="Chiến Tranh & Hòa Bình">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Chiến Tranh & Hòa Bình</h3><p class="price">320.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.4s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=600" alt="Thế Giới Của Sophie">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Thế Giới Của Sophie</h3><p class="price">165.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.5s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600" alt="Tắt Đèn">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Tắt Đèn - Ngô Tất Tố</h3><p class="price">95.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.6s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?w=600" alt="Đi Tìm Chất Thép">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Đi Tìm Chất Thép</h3><p class="price">135.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.7s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600" alt="Truyện Kiều">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Truyện Kiều (Bản Cổ)</h3><p class="price">450.000đ</p></div>
+            </div>
+            <div class="product-card reveal" style="animation-delay: 0.8s;">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1491841251912-c44a27c6e888?w=600" alt="Nhà Giả Kim">
+                    <div class="product-actions">
+                        <div class="btn-icon-action"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="btn-icon-action"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                </div>
+                <div class="product-info"><h3>Nhà Giả Kim</h3><p class="price">145.000đ</p></div>
+            </div>
         </div>
     </section>
 
-    <main class="container" id="sanpham">
-        <h2 class="section-title">Ấn Bản Nổi Bật</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <div class="badge">SÁCH HIẾM</div>
-                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1000" alt="Book 1">
-                <div class="book-info">
-                    <h3>Nhà Giả Kim (Bản Đặc Biệt)</h3>
-                    <p style="color: #888; font-size: 13px;">Paulo Coelho</p>
-                    <p class="price">250.000đ</p>
+       <!-- Tin Tức Mới Nhất -->
+    <section id="latest-news" style="background: #f4f4f2;">
+        <div class="section-header reveal">
+            <h2><i class="fa-solid fa-clock"></i> Tin Tức Mới Nhất</h2>
+            <div class="divider"></div>
+            <p style="color: #666;">Cập nhật những bài viết mới nhất tuần này</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card reveal" style="animation-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Thư viện số</h4>
+                    <p>Xu hướng số hóa thư viện và cách bảo tồn tri thức trong kỷ nguyên số...</p>
                 </div>
             </div>
-            <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1000" alt="Book 2">
-                <div class="book-info">
-                    <h3>Sapiens: Lược Sử Loài Người</h3>
-                    <p style="color: #888; font-size: 13px;">Yuval Noah Harari</p>
-                    <p class="price">185.000đ</p>
+            <div class="blog-card reveal" style="animation-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Đọc sách mỗi ngày</h4>
+                    <p>Lợi ích của việc đọc sách đều đặn và cách xây dựng thói quen đọc...</p>
                 </div>
             </div>
-            <div class="book-card">
-                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1000" alt="Book 3">
-                <div class="book-info">
-                    <h3>Chiến Tranh và Hòa Bình</h3>
-                    <p style="color: #888; font-size: 13px;">Leo Tolstoy</p>
-                    <p class="price">420.000đ</p>
+            <div class="blog-card reveal" style="animation-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Sách và sức khỏe</h4>
+                    <p>Ảnh hưởng của việc đọc sách đến sức khỏe tinh thần và thể chất...</p>
                 </div>
             </div>
-            <div class="book-card">
-                <div class="badge">BÁN CHẠY</div>
-                <img src="https://images.unsplash.com/photo-1531246755914-bc71025a7751?q=80&w=1000" alt="Book 4">
-                <div class="book-info">
-                    <h3>Suối Nguồn</h3>
-                    <p style="color: #888; font-size: 13px;">Ayn Rand</p>
-                    <p class="price">315.000đ</p>
+            <div class="blog-card reveal" style="animation-delay: 0.4s;">
+                <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Nhà văn nổi tiếng</h4>
+                    <p>Hành trình và những tác phẩm để đời của các nhà văn vĩ đại...</p>
+                </div>
+            </div>
+            <div class="blog-card reveal" style="animation-delay: 0.5s;">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Thư viện cộng đồng</h4>
+                    <p>Vai trò của thư viện cộng đồng trong việc phát triển tri thức địa phương...</p>
+                </div>
+            </div>
+            <div class="blog-card reveal" style="animation-delay: 0.6s;">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Truyện tranh cổ điển</h4>
+                    <p>Giá trị văn hóa và nghệ thuật của những bộ truyện tranh kinh điển...</p>
+                </div>
+            </div>
+            <div class="blog-card reveal" style="animation-delay: 0.7s;">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Sách và trẻ em</h4>
+                    <p>Phương pháp nuôi dưỡng đam mê đọc sách cho trẻ từ nhỏ...</p>
+                </div>
+            </div>
+            <div class="blog-card reveal" style="animation-delay: 0.8s;">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600" alt="">
+                <div class="blog-content">
+                    <span style="color: var(--accent); font-weight: 600; font-size: 12px;">BLOG | 2026</span>
+                    <h4>Thư viện lưu động</h4>
+                    <p>Ý tưởng mang sách đến những vùng miền xa xôi, hẻo lánh...</p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
+    <!-- Giới Thiệu -->
+    <section class="about-section reveal">
+        <div class="about-content">
+            <div class="about-text">
+                <span style="color: var(--accent); font-weight: 600; letter-spacing: 2px;">VỀ CHÚNG TÔI</span>
+                <h2 style="font-family: 'Playfair Display'; font-size: 40px; margin: 20px 0;">Di Sản Tri Thức Từ Những Trang Giấy Cũ</h2>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 30px;">
+                    Thư Hiên được thành lập với niềm đam mê sưu tầm và bảo tồn những cuốn sách quý. 
+                    Mỗi cuốn sách tại đây đều được tuyển chọn kỹ lưỡng, mang trong mình giá trị văn hóa và tri thức vượt thời gian.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>Sách đã bán</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Khách hàng</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Năm kinh nghiệm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1507842217121-9e93c8aaf27c?w=600" alt="Thư viện">
+            </div>
+        </div>
+    </section>
+
+    <!-- Danh Mục Nổi Bật -->
+    <section class="categories-section" style="background: #f4f4f2;">
+        <div class="section-header reveal">
+            <h2>Danh Mục Nổi Bật</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="category-grid">
+            <div class="category-card reveal" style="animation-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600" alt="Văn Học">
+                <div class="category-overlay">
+                    <h3>Văn Học</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+            <div class="category-card reveal" style="animation-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600" alt="Triết Học">
+                <div class="category-overlay">
+                    <h3>Triết Học</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+            <div class="category-card reveal" style="animation-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600" alt="Ngoại Văn">
+                <div class="category-overlay">
+                    <h3>Ngoại Văn</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+                        <div class="category-card reveal" style="animation-delay: 0.4s;">
+                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=600" alt="Sách Cũ">
+                <div class="category-overlay">
+                    <h3>Sách Cũ</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+            <div class="category-card reveal" style="animation-delay: 0.5s;">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600" alt="Sách Thiếu Nhi">
+                <div class="category-overlay">
+                    <h3>Sách Thiếu Nhi</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+            <div class="category-card reveal" style="animation-delay: 0.6s;">
+                <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?w=600" alt="Sách Kỹ Năng">
+                <div class="category-overlay">
+                    <h3>Sách Kỹ Năng</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+            <div class="category-card reveal" style="animation-delay: 0.7s;">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600" alt="Lịch Sử">
+                <div class="category-overlay">
+                    <h3>Lịch Sử</h3>
+                    <a href="#" class="btn-icon">Xem Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Đánh Giá Khách Hàng -->
+    <section class="testimonials-section">
+        <div class="section-header reveal">
+            <h2>Khách Hàng Nói Gì</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card reveal" style="animation-delay: 0.1s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Sách rất đẹp, bìa cứng cáp, giấy thơm mùi sách cũ. Đóng gói cẩn thận, giao hàng nhanh."</p>
+                <div class="customer-info">
+                    <h4>Nguyễn Văn A</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng thân thiết</span>
+                </div>
+            </div>
+            <div class="testimonial-card reveal" style="animation-delay: 0.2s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Thư Hiên là nơi tuyệt vời cho những người yêu sách. Nhân viên nhiệt tình, tư vấn rất chu đáo."</p>
+                <div class="customer-info">
+                    <h4>Trần Thị B</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng mới</span>
+                </div>
+            </div>
+            <div class="testimonial-card reveal" style="animation-delay: 0.3s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Đã mua nhiều lần, sách luôn được bảo quản tốt. Rất đáng tin cậy!"</p>
+                <div class="customer-info">
+                    <h4>Lê Văn C</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng thân thiết</span>
+                </div>
+            </div>
+            <div class="testimonial-card reveal" style="animation-delay: 0.4s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Giá cả hợp lý, sách đẹp như mô tả. Sẽ ủng hộ tiếp!"</p>
+                <div class="customer-info">
+                    <h4>Phạm Thị D</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng mới</span>
+                </div>
+            </div>
+            <div class="testimonial-card reveal" style="animation-delay: 0.5s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Đóng gói rất kỹ, sách không bị hư hỏng gì cả. Cảm ơn shop!"</p>
+                <div class="customer-info">
+                    <h4>Hoàng Văn E</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng thân thiết</span>
+                </div>
+            </div>
+            <div class="testimonial-card reveal" style="animation-delay: 0.6s;">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="color: #666; font-style: italic; margin: 20px 0;">"Sách cũ nhưng còn rất mới, giá tốt hơn nhiều so với sách mới."</p>
+                <div class="customer-info">
+                    <h4>Đặng Thị F</h4>
+                    <span style="color: var(--accent); font-size: 12px;">Khách hàng mới</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section reveal">
+        <div class="section-header">
+            <h2>Thắc Mắc Thường Gặp</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Sách có phải là sách cũ không?</h4>
+                <p>Có, chúng tôi chuyên cung cấp sách cũ đã qua sử dụng nhưng được bảo quản rất tốt. Một số sách mới sẽ được ghi rõ trong mô tả.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Chính sách đổi trả như thế nào?</h4>
+                <p>Chúng tôi hỗ trợ đổi trả trong vòng 7 ngày nếu sách có lỗi từ nhà sản xuất hoặc vận chuyển.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Thời gian giao hàng?</h4>
+                <p>Trong nội thành: 1-2 ngày. Ngoài tỉnh: 3-5 ngày. Miễn phí vận chuyển cho đơn hàng trên 500.000đ.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Có nhận bán lại sách cũ không?</h4>
+                <p>Có, chúng tôi nhận mua lại sách cũ với giá cao. Liên hệ trực tiếp để được tư vấn.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Sách có được bảo hành không?</h4>
+                <p>Sách cũ không có bảo hành nhưng chúng tôi cam kết chất lượng sách trước khi giao hàng.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Có thể thanh toán khi nhận hàng không?</h4>
+                <p>Có, chúng tôi hỗ trợ thanh toán khi nhận hàng (COD) cho tất cả đơn hàng.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section reveal">
+        <div class="newsletter-content">
+            <h2>Đăng Ký Nhận Tin</h2>
+            <p>Nhận thông tin về sách mới, ưu đãi đặc biệt và sự kiện văn hóa.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email của bạn" required>
+                <button type="submit" class="btn-icon">Đăng Ký</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="reveal">
         <div class="footer-grid">
             <div>
-                <h4>TIỆM SÁCH THƯ HIÊN</h4>
-                <p style="font-size: 13px; line-height: 1.8;">Thư Hiên – Điểm hẹn của những tâm hồn yêu sách và trân trọng những giá trị xưa cũ.</p>
+                <h4 style="color: white; margin-bottom: 20px;">THƯ HIÊN</h4>
+                <p style="color: #aaa; font-size: 14px;">Di sản tri thức từ những trang giấy cũ.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="#" style="color: white; margin-right: 15px;"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" style="color: white; margin-right: 15px;"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" style="color: white;"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
             <div>
-                <h4>Liên Kết</h4>
-                <ul style="list-style: none; padding: 0; font-size: 13px; line-height: 2;">
-                    <li>Hệ thống cửa hàng</li>
-                    <li>Chính sách thành viên</li>
-                    <li>Tuyển dụng</li>
+                <h4 style="color: white; margin-bottom: 20px;">DANH MỤC</h4>
+                <ul style="list-style: none; color: #aaa; font-size: 14px; line-height: 2;">
+                    <li>Văn học</li>
+                    <li>Triết học</li>
+                    <li>Ngoại văn</li>
+                    <li>Sách thiếu nhi</li>
                 </ul>
             </div>
             <div>
-                <h4>Hỗ Trợ</h4>
-                <ul style="list-style: none; padding: 0; font-size: 13px; line-height: 2;">
-                    <li>Vận chuyển</li>
-                    <li>Đổi trả sách</li>
-                    <li>Ký gửi sách cũ</li>
+                <h4 style="color: white; margin-bottom: 20px;">HỖ TRỢ</h4>
+                <ul style="list-style: none; color: #aaa; font-size: 14px; line-height: 2;">
+                    <li>Đổi trả</li>
+                    <li>Giao hàng</li>
+                    <li>Liên hệ</li>
+                    <li>Chính sách bảo mật</li>
                 </ul>
             </div>
-            <div class="contact-form">
-                <h4>Newsletter</h4>
-                <input type="email" placeholder="Nhập email của bạn..." style="width: 100%; padding: 10px; margin-bottom: 10px; border: none;">
-                <button style="background: var(--accent); color: white; border: none; padding: 10px 20px; width: 100%; cursor: pointer;">ĐĂNG KÝ</button>
+            <div>
+                <h4 style="color: white; margin-bottom: 20px;">BẢN TIN</h4>
+                <input type="email" placeholder="Email của bạn" class="footer-input">
+                <button class="btn-icon" style="margin-top: 10px; padding: 10px 20px; font-size: 12px;">Gửi</button>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tiệm Sách Thư Hiên. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .product-card, .blog-card, footer, .testimonial-card, .faq-item').forEach((el) => {
+            el.style.opacity = "0";
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
+               
