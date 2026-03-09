@@ -1,27 +1,139 @@
-<main class="container" style="margin-top: 40px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-        <h2>Chuyên Mục: Sách Kỹ Năng</h2>
-        <select style="padding: 5px;">
-            <option>Sắp xếp: Mới nhất</option>
-            <option>Giá: Thấp đến Cao</option>
-        </select>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sách Kỹ Năng | Tiệm Sách Thư Hiên</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+<header>
+    <div class="logo"><a href="index.html"><img src="logo.png" width="100" alt="Thư Hiên"></a></div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li class="has-dropdown">
+                <a href="category.html">Danh Mục <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="category.html">Sách Kỹ Năng</a></li>
+                    <li><a href="#">Triết Học & Đời Sống</a></li>
+                    <li><a href="#">Sách Ngoại Văn</a></li>
+                    <li><a href="#">Ấn Bản Giới Hạn</a></li>
+                    <li><a href="#">Sách Thiếu Nhi Xưa</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Bán Lại Sách Cũ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="news.html">Tin Tức</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+        <i class="fa-solid fa-search"></i>
+        <i class="fa-regular fa-user"></i>
+        <div class="cart-icon"><i class="fa-solid fa-shopping-bag"></i><span class="cart-badge">3</span></div>
+    </div>
+</header>
+   <main class="container category-layout">
+  <aside class="sidebar">
+    <div class="filter-section">
+      <h3>DANH MỤC SÁCH</h3>
+      <ul>
+        <li><a href="#" class="active">Sách Kỹ Năng</a></li>
+        <li><a href="#">Sách Văn Học</a></li>
+        <li><a href="#">Triết Học - Tâm Lý</a></li>
+        <li><a href="#">Sách Ngoại Văn</a></li>
+        <li><a href="#">Ấn Bản Giới Hạn</a></li>
+      </ul>
     </div>
 
-    <div class="product-grid">
-        <div class="card">
-            <img src="https://picsum.photos/300/400?random=10" alt="Book">
-            <div class="card-info">
-                <h3>Kỹ Năng Giải Quyết Vấn Đề</h3>
-                <p class="price">120.000đ</p>
-                <a href="detail.html" class="btn-buy" style="text-decoration: none; display: inline-block;">Xem ngay</a>
+    <div class="filter-section">
+      <h3>KHOẢNG GIÁ</h3>
+      <ul>
+        <li><input type="checkbox"> Dưới 100.000đ</li>
+        <li><input type="checkbox"> 100.000đ - 200.000đ</li>
+        <li><input type="checkbox"> Trên 200.000đ</li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="products-grid-container">
+    <div class="category-header">
+      <h1>Sách Kỹ Năng</h1>
+      <div class="sort-options">
+        <label>Sắp xếp:</label>
+        <select>
+          <option>Mới nhất</option>
+          <option>Giá thấp đến cao</option>
+          <option>Giá cao đến thấp</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="products-grid">
+      <div class="book-card">
+        <div class="book-img">
+          <img src="dacnhantam.png" alt="Sách">
+        </div>
+        <div class="book-info">
+          <h3>Đắc Nhân Tâm</h3>
+          <p class="price">120.000 VNĐ</p>
+          <a href="detail-dac-nhan-tam.html" class="btn-detail">Xem chi tiết</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-img"><img src="tuduyphanbien.png" alt="Sách"></div>
+        <div class="book-info">
+          <h3>Tư Duy Phản Biện</h3>
+          <p class="price">150.000 VNĐ</p>
+          <a href="detail-tu-duy-phan-bien.html" class="btn-detail">Xem chi tiết</a>
+        </div>
+      </div>
+      </div>
+  </section>
+</main>
+<!-- Footer -->
+<footer class="reveal">
+    <div class="footer-grid">
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">THƯ HIÊN</h4>
+            <p style="color: #aaa; font-size: 14px;">Di sản tri thức từ những trang giấy cũ.</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="https://facebook.com" target="_blank" style="color: white; margin-right: 15px;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" style="color: white; margin-right: 15px;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" style="color: white;"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">DANH MỤC</h4>
+            <ul style="list-style: none; color: #aaa; font-size: 14px; line-height: 2;">
+                <li><a href="category.html" style="color: #aaa; text-decoration: none;">Văn học</a></li>
+                <li><a href="category.html" style="color: #aaa; text-decoration: none;">Triết học</a></li>
+                <li><a href="category.html" style="color: #aaa; text-decoration: none;">Ngoại văn</a></li>
+                <li><a href="category.html" style="color: #aaa; text-decoration: none;">Sách thiếu nhi</a></li>
+            </ul>
         </div>
-
-    <div class="pagination">
-        <div class="page-item active">1</div>
-        <div class="page-item">2</div>
-        <div class="page-item">3</div>
-        <div class="page-item">Tiếp »</div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">HỖ TRỢ</h4>
+            <ul style="list-style: none; color: #aaa; font-size: 14px; line-height: 2;">
+                <li><a href="chinh-sach.html" style="color: #aaa; text-decoration: none;">Đổi trả</a></li>
+                <li><a href="chinh-sach.html" style="color: #aaa; text-decoration: none;">Giao hàng</a></li>
+                <li><a href="lien-he.html" style="color: #aaa; text-decoration: none;">Liên hệ</a></li>
+                <li><a href="chinh-sach.html" style="color: #aaa; text-decoration: none;">Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color: white; margin-bottom: 20px;">BẢN TIN</h4>
+            <input type="email" placeholder="Email của bạn" class="footer-input">
+            <button class="btn-icon" style="margin-top: 10px; padding: 10px 20px; font-size: 12px;">Gửi</button>
+        </div>
     </div>
-</main>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tiệm Sách Thư Hiên. All rights reserved.</p>
+    </div>
+</footer>
+  </body>
+</html>
