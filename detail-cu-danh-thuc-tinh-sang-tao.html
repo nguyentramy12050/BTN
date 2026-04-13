@@ -74,15 +74,27 @@
                 <span>Đánh giá: <strong>⭐⭐⭐⭐⭐</strong></span>
             </div>
             <div class="entry-price">135.000 VNĐ</div>
-            <div class="entry-summary">
-                <h3>Phá vỡ lối mòn:</h3>
-                <p>Bạn có đang bị kẹt trong những quy tắc cũ kỹ? Cuốn sách này cung cấp những kỹ thuật thực tế để "đánh thức" trí tưởng tượng, giúp bạn tìm ra những ý tưởng đột phá trong công việc và cuộc sống hàng ngày.</p>
-            </div>
-            <div class="product-attributes">
-                <div class="attr-item"><span>Dịch giả:</span> <strong>Nguyễn Văn B</strong></div>
-                <div class="attr-item"><span>Số trang:</span> <strong>250 trang</strong></div>
-                <div class="attr-item"><span>Ngôn ngữ:</span> <strong>Tiếng Việt</strong></div>
-            </div>
+            <div class="product-details-tabs" style="margin-top: 20px;">
+    <div class="tab-headers" style="display: flex; border-bottom: 2px solid #eee; margin-bottom: 15px;">
+        <div class="tab-link active" data-tab="tab-mota" style="padding: 10px 20px; cursor: pointer; font-weight: bold; border-bottom: 2px solid #8b572a; color: #8b572a;">Mô tả sách</div>
+        <div class="tab-link" data-tab="tab-thongso" style="padding: 10px 20px; cursor: pointer; color: #666;">Thông số chi tiết</div>
+    </div>
+
+    <div id="tab-mota" class="tab-content">
+        <h3>Phá vỡ lối mòn:</h3>
+        <p>Bạn có đang bị kẹt trong những quy tắc cũ kỹ? Cuốn sách này cung cấp những kỹ thuật thực tế để "đánh thức" trí tưởng tượng, giúp bạn tìm ra những ý tưởng đột phá trong công việc và cuộc sống hàng ngày.</p>
+    </div>
+
+    <div id="tab-thongso" class="tab-content" style="display: none;">
+        <div class="product-attributes">
+            <div class="attr-item"><span>Dịch giả:</span> <strong>Nguyễn Văn B</strong></div>
+            <div class="attr-item"><span>Số trang:</span> <strong>250 trang</strong></div>
+            <div class="attr-item"><span>Ngôn ngữ:</span> <strong>Tiếng Việt</strong></div>
+            <div class="attr-item"><span>Nhà xuất bản:</span> <strong>NXB Trẻ</strong></div>
+        </div>
+    </div>
+</div>
+            
             <div class="purchase-section">
                 <div class="quantity">
                     <button>-</button><input type="number" value="1"><button>+</button>
@@ -132,5 +144,32 @@
         <p>&copy; 2024 Tiệm Sách Thư Hiên. All rights reserved.</p>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    // Xử lý khi click vào tiêu đề tab
+    $('.tab-link').click(function(){
+        // Lấy ID của tab cần hiển thị
+        var tabID = $(this).attr('data-tab');
+
+        // Đổi trạng thái active cho tiêu đề
+        $('.tab-link').removeClass('active').css({'border-bottom': 'none', 'color': '#666', 'font-weight': 'normal'});
+        $(this).addClass('active').css({'border-bottom': '2px solid #8b572a', 'color': '#8b572a', 'font-weight': 'bold'});
+
+        // Ẩn nội dung cũ và hiển thị nội dung mới với hiệu ứng mờ dần (fadeIn)
+        $('.tab-content').hide();
+        $('#' + tabID).fadeIn(400);
+    });
+
+    // Bonus: Hiệu ứng biến mất khi click vào ảnh (đúng bài bạn đang học)
+    $('.main-image img').click(function(){
+        $(this).fadeOut(1000, function(){
+            alert("Bạn vừa thực hiện hiệu ứng biến mất phần tử trong DOM!");
+            $(this).fadeIn(); // Hiện lại sau khi biến mất để khách còn xem ảnh nhé
+        });
+    });
+});
+</script>
   </body>
 </html>

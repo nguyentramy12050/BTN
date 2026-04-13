@@ -53,13 +53,15 @@
 </header>
 <main>
     <div class="banner">
-        <img src="https://file.hstatic.net/200000612501/article/sach_cu_da_nang_4e2f2ecaaa814d6aaf12c32f2fea0a08.jpg" class="banner-img" alt="Banner Thư Hiên">
-        <div class="banner-overlay"></div>
-        <div class="text-box">
-            <h1>Thư Hiên xin chào</h1>
-            <p>Gói ghém thời gian vào từng trang sách</p>
-        </div>
+    <img src="https://file.hstatic.net/200000612501/article/sach_cu_da_nang_4e2f2ecaaa814d6aaf12c32f2fea0a08.jpg" class="banner-img active" alt="Banner 1">
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200" class="banner-img" alt="Banner 2" style="display:none;">
+    
+    <div class="banner-overlay"></div>
+    <div class="text-box">
+        <h1>Thư Hiên xin chào</h1>
+        <p>Gói ghém thời gian vào từng trang sách</p>
     </div>
+</div>
 
     <div class="section-divider"></div>
 
@@ -352,5 +354,22 @@
         <p>&copy; 2024 Tiệm Sách Thư Hiên. All rights reserved.</p>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    // Thiết lập thời gian chuyển ảnh (3000ms = 3 giây)
+    setInterval(function(){
+        // Tìm ảnh đang hiển thị (có class active)
+        let currentImg = $('.banner-img.active');
+        // Tìm ảnh tiếp theo, nếu hết ảnh thì quay lại ảnh đầu tiên
+        let nextImg = currentImg.next('.banner-img').length ? currentImg.next('.banner-img') : $('.banner-img').first();
+
+        // Hiệu ứng mờ dần ảnh cũ và hiện dần ảnh mới
+        currentImg.fadeOut(1000).removeClass('active');
+        nextImg.fadeIn(1000).addClass('active');
+    }, 4000);
+});
+</script>
 </body>
 </html>

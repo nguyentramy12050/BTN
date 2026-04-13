@@ -49,6 +49,7 @@
         </div>
       </div>
     </header>
+
     <main class="buyback-page">
         <section class="buyback-hero">
             <div class="container">
@@ -118,6 +119,26 @@
             </div>
         </section>
     </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script>
+$(document).ready(function(){
+    // Khi khách hàng click vào khối .step
+    $('.step').click(function(){
+        
+        // 1. Tìm thẻ <p> nằm bên trong khối .step vừa được click
+        // slideToggle sẽ tự động: nếu đang ẩn thì trượt xuống (hiện), nếu đang hiện thì trượt lên (ẩn)
+        $(this).find('p').slideToggle(400);
+
+        // 2. (Nâng cao) Đóng các bước khác lại khi mở bước mới
+        // Giúp giao diện gọn gàng, chỉ tập trung vào 1 bước duy nhất
+        $('.step').not($(this)).find('p').slideUp(400);
+
+        // 3. Thay đổi style để đánh dấu bước đang chọn
+        $(this).toggleClass('active-step');
+        $('.step').not($(this)).removeClass('active-step');
+    });
+});
+</script>
     </body>
 </html>
